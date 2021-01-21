@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+
+  server:
+    container_name: erc_mooring
+    image: erc_mooring
+    build: docker/erc_mooring
+    network_mode: "host"
+    tty: True
+    # ports:
+    #   - "4141:4141"
+    volumes:
+      - ./code:/usr/src/code/
